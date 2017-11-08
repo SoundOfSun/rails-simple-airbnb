@@ -1,0 +1,16 @@
+.margin-top-negative {
+  margin-top: -75px!important;
+}
+@media (min-width: 768px)
+.container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.container {
+    max-width: 540px;
+}
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

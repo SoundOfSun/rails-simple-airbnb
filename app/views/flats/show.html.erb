@@ -1,2 +1,56 @@
-<h2><%= @flat.name %></h2>
-<p><%= @flat.address %></p>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200);"></div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="flat-show-card">
+        <h2><%= @flat.name %></h2>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+        <div class="map"></div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="flat-show-card">
+        <h5>Book this place !</h5>
+        <form action="" class="book-form">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">From:</span>
+            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-addon" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn-blue large-btn">
+        </form>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex people">
+            <i class="fa fa-users card-icon" aria-hidden="true"></i>
+            <span><%= @flat.number_of_guests %></span>
+          </div>
+          <div class="flex price">
+            <i class="fa fa-eur card-icon" aria-hidden="true"></i>
+            <span><%= @flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="flex">
+          <p>share</p>
+          <div class="flex-align">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
