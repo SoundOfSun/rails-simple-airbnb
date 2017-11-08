@@ -11,7 +11,11 @@
 }
 .flat-description {
   padding: 24px;
-  background-color: rgb(230,230,230);
+  background-color: rgba(50,183,150,0.1);
+
+  h4, p {
+    font-weight: 300;
+  }
 }
 .card-icon {
   margin-right: 5px;
