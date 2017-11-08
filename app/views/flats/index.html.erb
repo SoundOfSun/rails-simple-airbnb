@@ -1,0 +1,32 @@
+<div class="index-layout">
+  <div class="index-intro">
+    <h1>All our Flats</h1>
+    <p>You searched for . We found 3 flats out of our <%= Flat.count %> on our website.</p>
+  </div>
+  <div class="flats-results">
+    <% @flats.each do |flat| %>
+      <div class="flat">
+          <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+          <div class="flat-description">
+            <h4><%= flat.name %></h4>
+            <p><%= flat.address %></p>
+            <div class="flex">
+              <div class="flex people">
+                <i class="fa fa-users card-icon" aria-hidden="true"></i>
+                <span><%= flat.number_of_guests %></span>
+              </div>
+              <div class="flex price">
+                <i class="fa fa-eur card-icon" aria-hidden="true"></i>
+                <span><%= flat.price_per_night %></span>
+              </div>
+            </div>
+          </div>
+          <div class="flat-actions">
+            <%= link_to 'More info', flat_path(flat), class: 'blue' %>
+            <a href="" class="orange">Edit</a>
+            <a href="" class="red">Remove</a>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>

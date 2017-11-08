@@ -1,0 +1,25 @@
+// INDEX GRID
+.flats-results {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 20px;
+}
+.flat {
+  flex: 0 0 30%;
+}
+.flat-description {
+  h4 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+.flex {
+  display: flex;
+}
+.price {
+  margin-left: 10px;
+}
