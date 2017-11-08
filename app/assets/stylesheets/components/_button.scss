@@ -1,0 +1,20 @@
+// NAVBAR ADD FLAT BUTTON
+.nav-btn {
+  font-size: 16px;
+  color: $blue;
+  background-color: transparent;
+  border: 1px solid $blue;
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &:link, &:hover, &:focus, &:active, &:visited {
+    text-decoration: none;
+  }
+}
