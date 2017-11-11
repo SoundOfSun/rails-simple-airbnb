@@ -31,12 +31,24 @@
 }
 .blue {
   color: $blue;
+
+  &:visited {
+    color: $blue;
+  }
 }
 .orange {
   color: $orange;
+
+  &:visited {
+    color: $orange;
+  }
 }
 .red {
   color: $red;
+
+  &:visited {
+    color: $red;
+  }
 }
 .blue, .orange, .red {
   text-decoration: none;

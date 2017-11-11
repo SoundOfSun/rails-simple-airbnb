@@ -24,7 +24,9 @@
           <div class="flat-actions">
             <%= link_to 'More info', flat_path(flat), class: 'blue' %>
             <%= link_to 'Edit', edit_flat_path(flat), class: 'orange' %>
-            <a href="" class="red">Remove</a>
+            <%= link_to 'Remove', flat_path(flat),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }, class: 'red' %>
           </div>
       </div>
     <% end %>
