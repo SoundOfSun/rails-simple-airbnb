@@ -10,7 +10,9 @@
         <div class="flat-show-card">
           <h3>A bit more about this flat...</h3>
           <p><%= @flat.description %></p>
-          <div id="map"></div>
+          <div id="map">
+            <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:F%740.<%= @flat.latitude %>,<%= @flat.longitude %>&key=AIzaSyCyHbIF8IO22iPcD2v6pM-qushGYYpOopY" alt="">
+          </div>
         </div>
       </div>
       <div class="col-xs-4">
@@ -56,3 +58,10 @@
     </div>
   </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+  const coord = <%= raw @flat_coordinates.to_json %>;
+  alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+  <% end %>
+<% end %>
