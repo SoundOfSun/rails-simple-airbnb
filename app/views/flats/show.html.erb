@@ -6,6 +6,7 @@
         <div class="flat-show-card">
           <h2><%= @flat.name %></h2>
           <p><%= @flat.address %></p>
+          <%= link_to 'Edit the information', edit_flat_path(@flat), class: 'orange' %>
         </div>
         <div class="flat-show-card">
           <h3>A bit more about this flat...</h3>
