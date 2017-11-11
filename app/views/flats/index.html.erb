@@ -6,7 +6,7 @@
   <div class="flats-results">
     <% @flats.each do |flat| %>
       <div class="flat">
-          <div class="flat-img" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
+          <div class="flat-img" style="background-image: url('<%= flat.picture_url %>')"></div>
           <div class="flat-description">
             <h4><%= flat.name %></h4>
             <p><%= flat.address %></p>
