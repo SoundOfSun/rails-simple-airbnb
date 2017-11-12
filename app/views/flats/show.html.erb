@@ -65,4 +65,32 @@
   const coord = <%= raw @flat_coordinates.to_json %>;
   alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
   <% end %>
+
+  <%= javascript_tag do %>
+    function initMap() {
+      var myLatLng = {lat: <%= @flat.latitude %>, lng: <%= @flat.longitude %>};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        scrollwheel: false,
+        zoom: 13
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        title: 'Hello World!',
+      });
+
+      var infowindow = new google.maps.InfoWindow({
+        content: '<div><p><%= @flat.address %></p><img src="<%= @flat.picture_url %>" alt="Flat" height="200"></div>'
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  <% end %>
 <% end %>
